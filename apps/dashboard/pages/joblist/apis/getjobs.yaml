@@ -1,0 +1,22 @@
+blocks:
+  - name: Step1
+    step:
+      integration: 4fae05ae-9160-4a59-872f-03170a2ad402
+      mssql:
+        body: |-
+          SELECT 
+          	* 
+          FROM sync_jobs j
+          ORDER BY j.JobRecID
+          OFFSET {{(Table1.pageNo - 1) * 100 }} ROWS 
+          FETCH NEXT 100 ROWS ONLY 
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: 11eb78c2-ab75-49f8-b422-4d41c74b3e9e
+  name: getJobs
+  organization: 5b97a3f0-e2fa-4922-97a9-3823d5d0f99c
+trigger:
+  application:
+    id: 467ebc2b-d60a-49b9-abf2-cbbd016edf22
+    pageId: b3b64205-d2db-4c7f-ad47-6b74416e74b1

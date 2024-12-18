@@ -1,0 +1,33 @@
+blocks:
+  - conditional:
+      elseIf: []
+      if:
+        blocks:
+          - name: Step2
+            step:
+              integration: 4fae05ae-9160-4a59-872f-03170a2ad402
+              mssql:
+                body: |
+                  SELECT 
+                  	p.ProjectName, 
+                  	p.ProjectRecID
+                  FROM sync_projects as p 
+                  WHERE 
+                      ({{Global.URL.queryParams}} <> '{}' AND p.ProjectRecID = {{Global.URL.queryParams.projectID}})
+                      OR 
+                      ({{Global.URL.queryParams}} = '{}' AND 
+                      (CAST(p.ProjectRecID AS VARCHAR) LIKE '%' + {{Dropdown1.searchText}} + '%' 
+                      OR p.ProjectName LIKE '%' + {{Dropdown1.searchText}} + '%'))
+                operation: run_sql
+                usePreparedSql: true
+        condition: "{{Dropdown1.searchText || Global.URL.queryParams.projectID}}"
+    name: Condition1
+metadata:
+  id: 28045581-3c5c-4ff0-82a6-d220b2cedf43
+  name: getProjects
+  organization: 5b97a3f0-e2fa-4922-97a9-3823d5d0f99c
+trigger:
+  application:
+    id: 467ebc2b-d60a-49b9-abf2-cbbd016edf22
+    options: {}
+    pageId: e8010939-0577-47ad-9316-61b4c2c93538

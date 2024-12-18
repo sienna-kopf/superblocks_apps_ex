@@ -1,0 +1,71 @@
+blocks:
+  - name: getProjects
+    step:
+      integration: 4fae05ae-9160-4a59-872f-03170a2ad402
+      mssql:
+        body: |-
+          SELECT
+              YEAR(p.ProjectDate) AS year,
+              MONTH(p.ProjectDate) AS month,
+              COUNT(DISTINCT p.ProjectRecID) AS project_count,
+              COUNT(DISTINCT j.JobRecID) AS job_count
+          FROM sync_projects p
+          LEFT JOIN sync_jobs j ON YEAR(p.ProjectDate) = YEAR(j.JobDate) AND MONTH(p.ProjectDate) = MONTH(j.JobDate)
+          WHERE p.ProjectDate >= DATEADD(MONTH, -6, GETDATE())
+          GROUP BY YEAR(p.ProjectDate), MONTH(p.ProjectDate)
+          ORDER BY YEAR(p.ProjectDate) DESC, MONTH(p.ProjectDate) DESC
+        operation: run_sql
+        usePreparedSql: true
+  - name: Step3
+    step:
+      integration: python
+      python:
+        body: |
+          import pandas as pd
+          import plotly.express as px
+
+          data = getProjects.output
+
+          formatted_data = {
+              "year": [entry["year"] for entry in data],
+              "month": [entry["month"] for entry in data],
+              "Projects": [entry["project_count"] for entry in data],
+              "Jobs": [entry["job_count"] for entry in data],
+          }
+
+          # Create the DataFrame
+          df = pd.DataFrame(formatted_data)
+
+          # Format the month column to "MMM YY"
+          df["month_str"] = pd.to_datetime(df[["year", "month"]].assign(day=1)).dt.strftime(
+              "%b %y"
+          )
+
+          custom_colors = ["#3E4A61", "#A16E83"]
+
+          # Create the bar chart
+          fig = px.bar(
+              df,
+              x="month_str",
+              y=["Projects", "Jobs"],
+              #     title="Projects and Jobs by Month",
+              color_discrete_sequence=custom_colors,
+              labels={"value": "Count", "month_str": "Month"},
+              barmode="group",
+          )
+
+          fig.update_layout(
+              plot_bgcolor="#f0f0f0",  # Set the background color of the plot area
+              paper_bgcolor="#f0f0f0",
+              legend_title=None,  # Remove the legend title
+              margin=dict(l=20, r=20, t=40, b=20, pad=4),  # Set margins
+          )
+          return fig
+metadata:
+  id: f6b4816a-954b-46b4-a840-46ed232e298f
+  name: getProjectsJobs_byMonth_last6month
+  organization: 5b97a3f0-e2fa-4922-97a9-3823d5d0f99c
+trigger:
+  application:
+    id: 467ebc2b-d60a-49b9-abf2-cbbd016edf22
+    pageId: 41f8884c-9624-402f-8c12-670d34b59548

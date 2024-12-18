@@ -1,0 +1,15 @@
+blocks:
+  - name: Step1
+    step:
+      integration: javascript
+      javascript:
+        body: |
+          return Dropdown2.selectedOptionValues.join(",").split(",").map(Number);
+metadata:
+  id: 739311b3-9f81-455f-9ff1-fde6b7f8a293
+  name: API1
+  organization: 5b97a3f0-e2fa-4922-97a9-3823d5d0f99c
+trigger:
+  application:
+    id: 467ebc2b-d60a-49b9-abf2-cbbd016edf22
+    pageId: 02ff3e6b-84e7-478d-ae24-97231f07d297

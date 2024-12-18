@@ -1,0 +1,2454 @@
+applicationId: 467ebc2b-d60a-49b9-abf2-cbbd016edf22
+id: e8010939-0577-47ad-9316-61b4c2c93538
+isHidden: false
+layouts:
+  - dsl:
+      apis:
+        apiMap:
+          28045581-3c5c-4ff0-82a6-d220b2cedf43:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 28045581-3c5c-4ff0-82a6-d220b2cedf43
+            onError:
+              - id: 0ddccc3e-fba1-465a-ac7d-51786d6e1839
+                message: "{{getProjects.error}}"
+                style: error
+                type: showAlert
+          48ea6ebf-0698-4142-b2b7-ffdee01ff438:
+            dynamicTriggerPathList:
+              - key: onError
+            id: 48ea6ebf-0698-4142-b2b7-ffdee01ff438
+            onError:
+              - id: 3ee03dd6-884c-4547-b07a-6f21fdd0df32
+                message: "{{getJobs.error}}"
+                style: error
+                type: showAlert
+          cfa2374c-7399-446f-99fc-a3688dc34962:
+            dynamicTriggerPathList:
+              - key: onError
+            id: cfa2374c-7399-446f-99fc-a3688dc34962
+            onError:
+              - id: 543ac081-c559-45e9-ad2d-4de5595ad447
+                message: "{{getProjectDetails.error}}"
+                style: error
+                type: showAlert
+      cachedData:
+        pageLoadActions:
+          apiDeps:
+            getJobs: []
+            getProjectDetails:
+              - getProjects
+            getProjects: []
+          apiNames:
+            - getProjects
+            - getJobs
+            - getProjectDetails
+      canExtend: true
+      children:
+        - backgroundColor: "{{ theme.colors.contrastText }}"
+          canExtend: true
+          children:
+            - alignment: STRETCH
+              backgroundColor: "#2c2c2c"
+              canExtend: true
+              children:
+                - animateLoading: true
+                  appMode: EDIT
+                  backgroundColor: transparent
+                  collapseWhenHidden: true
+                  defaultImage: https://res.cloudinary.com/drako999/image/upload/v1589196259/default.png
+                  dynamicBindingPathList: []
+                  dynamicTriggerPathList: []
+                  fillContainer: false
+                  gridColumns: 12
+                  height:
+                    mode: gridUnit
+                    value: 8
+                  image: data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMACQYHCAcGCQgICAoKCQsOFw8ODQ0OHBQVERciHiMjIR4gICUqNS0lJzIoICAuPy8yNzk8PDwkLUJGQTpGNTs8Of/bAEMBCgoKDgwOGw8PGzkmICY5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5Of/AABEIAWgBaAMBIgACEQEDEQH/xAAbAAEBAQEBAQEBAAAAAAAAAAAABwYFBAMCAf/EADwQAAEDAwAGBgkEAgMAAwEAAAABAgMEBREGEiExQYETFCORocEHFSJRUmFxctEygrHwQrKSk+EWU2Jj/8QAGQEBAAMBAQAAAAAAAAAAAAAAAAMEBQIB/8QAJBEBAAICAgIDAAMBAQAAAAAAAAECAxEEEiFBE1FxFDFhIjL/2gAMAwEAAhEDEQA/AJoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB6qO3VlaqdXge5F/wAsYTvXYeU3mjVX1q1RIq+3EnRu5bvDBDmyTjruISY6xadSzNxsNRb6JKmSRjlR2HNbwz8zklLq6dtXSy07v0yN1foTeWN0Mr43ph7F1VT3Khzx8s5Inf8Ab3LTrPh+AAWEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHd0SrOguC07lwydMfuTd5nCP1FI6KVkjFw5io5F9yocXr3rNXVZ1O1QTehjNL6Lq9wbUNbhlQmf3Jv8jWUVQ2rpYqhu6Rut9Dz6SUPXbPKjW5ki7RnLf4ZM7Dfpk8rWSvaqeAA1FMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABrdDKzXhlo3LtYuuz6Lv8AH+TWxJlMLtRSZWer6jcYZ1XDEXD/ALV3lNiXKIu9FM3k06239rWG266TW+0Pq+6T06JhiLrM+1dqf35HPNvp3Qa9LDXNb7Ua9G/Hwru8f5MQXcF+9IlBevW2gAErgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHasFgmvFLXzs1kSmi1mY/wA379XuRfA4pzFomZiPT3U62FE0UreuWqLWdmSLs3ct3hgnZodCq3q1zWnc7DKhMfuTd5kPJp2p+O8VtWb2rpWV1FNSyfplYrfp7l5ElnifBM+GRuHxuVrk9yoWKIwGnlv6tdW1TW4jqW5XG5HJsXy8Stw8mrTT7S5q+NswADRVgGqtlgt9dQQ1CST5e32sOTYvHgeiXRWj6N/RyTI/Hs5cmM9xBPJpE6lLGK0xtjQfp7XMerXIqOauFReB+SdEAAAAAAAAAAAAAANHYrBDXUXWKl0rdZ2GI1UTYnL35Oj/APFaD/7Kj/kn4ILcilZ1KSMVpjbFg+1WkLamVtOrlhR2GK5dqofEnhHIAAAAAAAAAAAAAAAAAAAAAAAAETOxN4NDoNavWl/iV7cwU/avzuXG5Oa48Tm94pWbS9iNzpRtFrV6osVPTubiZ6dJL9y/jYnImOltt9WX2oha3ET16SP7V/C5TkWeQxHpHt3WLdFXMTL6Z2HY4sX8LjvUyuLmn5dz7WclI6+PSbH7ildDKyWN2Hscjmr7lQ/ANdVV611Ta2igqWfpkYjvp705Hl0tt3rGxTI1uZYO1Zj5b/DJxPR9X68E1A53tRr0jM+5d/jjvNvGmUwqZRTGvE4snj0uRPeqHg6ekdu9V3mppkbiNHa0f2rtT8cjmGxW0WiJhUmNTpp9DazDpaNy7F7RmfHyNUTagqXUdbFUN3sdlccU4+GSkMc2RjXtXLXJlFTiZ/Jp1t2+1nDbcaYnSqi6tc1la3DJ010+vH+/M4pvdKKLrdpe9rcyQL0ifTj4fwYItce/an4hy11YABOjAAAAAAAAD600DqmojgYmXSO1U+R8jR6HUfSVMlW5PZjTVZ9y/wDn8nGS/Ssy6pXtOmqp4W08EcMaYYxqNTkeDSKt6nbJFauJJOzb79u/wydMxWldb1i4pA1csgTV+SuXf5dxnYKd7+VrJbrVwwAaimAAAAAAAAAAAAAAAAAAAAAAAAFa9Htq9X2Rs724mq16Rc8G/wCKd239xN9Hba67XimpMLqOdrSKnBibV/vzLdG1rWo1rURqJhETgZ/OyaiKQnw19kh4a+njq6aWnlTLJWKx3M5F/wBI227SO3W9HIkb1VZ/lrbG9y7TuSFDpasRM+08TE7hDq2mko6uamkTD4nqxfng+JrvSHb+hr4q5jcNnTVfj4k/KY7jIm3iv3pFlO1es6dCwV/q27U9Sq4YjtV/2rsUsES5RFRcou3YQ8quhVw6/ZItZ2ZYOyfy3eGCpzcfiLwlw29OZ6SLb0lJBcmNy6Jejkx8K7u5f9ielwr6OO4W+ekk/TKxW/T3LyXBE6iF9NPJBK3VkjcrHJ7lTYp1wsnanX6eZq6nb5m30UrOs21IXLl8C6vLh59xiDraM1nVLoxrlwybs157vH+SfPTtSXOO3WygMajmq1yIrVTCovEmt1o3UFxnplzhjvZzxau1PDBS4+BmNOqHLIK5rd3Zvx3p5+BT4t+t+s+02au67Y8AGkqgAAAAAAACJlUREyqlEs9H1G3RQqmHoms/7l3mR0ZouuXRiubmOHtHct3jg3ZR5d/MVhYw19vPX1TaOjlqHbmNVUzxXh44Jw97pHue52XOXKqvHJp9Ma3ZFRtdv7R+PDz8DLEvFp1rv7c5rbnQACyhAAAAAAAAAAAAAAAAAAAAAAA9FBSSV1bBSRJ7cr0any+fI8mdRuRQPRpbOhopblI3D511I88GJv71/wBTbSSshhfNI5GsjarnKvBE3nmoaaOkpYqaFuI4mIxvIz3pEunU7KlIx2JatdXZwYm1fJOamNMzmy/q54pVOLxXyXO6VNa/KLK/WRF4JwTkmCraPXH1pZKapV2ZFbqyfcmxe/fzI4bX0b3Ho56m3Pd7MidKzPxJsXvTH/Ev8nFE4/HpBit/1+tLpPQesrPPAjcyNTXj+5PztTmSUtsnElOlFB6vvM7GtxHIvSM+i/hckXCyf3SXeavtyDUej+49VvC0rnYjqm6u3g5NqeaczLn0glfBMyaN2q+NyOaqcFQu5Kd6zVDWdTtdYyZ+ka2dUvLaxjcR1bcrjg9Ni+S95Q7RWMuFBT1cf6ZWI7CcF4pyXJz9NbZ6z0enRrczU/bMx8t6d2fAyePeceXz+LWSO1UfP6i4VFRcKi52cD+A2VNTLLVpXW+Coz7Tkw75OTeeq40bbhbp6V2O0ZhM8F4eODJ6D1urLNROdscnSMz703+XcbiPgZGas47+Fyk9qo+9ro3uY5qo5q4VF4H5NBppQdUvCzNbiOpTpE+7j+eZnzVpaL1i0Klo1OgAHTwAAAA9Vro3V9fBTNzh7sOVOCcfDJ5MxEbkiNthonQ9VtaTObiSoXX/AG8PNeZ1nubGxznKiNamVVeB9la1jEa1qI1qYRE4Gf0rrerW7oWuw+ddX9vHy7zK85b/AKu+KVZK41Tq2tlqHZ9t2UzwTh4HmANWIiI1ClM7AAegAAAAAAAAAAAAAAAAAAAAAG29G9t155rlI3ZGnRx596717sd6mLjY6R7Y2NVz3LqtROKqWSx0DbZbKekbhVjb7Spxcu1V78lTmZOtOse0uGu526jCR6aXP1nfp3NdmGDso8ccb15rnwKNpPc/VVjqKhrsSuTo4vuX8bV5EbIeDj/u8u81vQeq11rrfcaerZnMT0cqJxTinNMnlBoTETGpV4nS1pI2WJsjHI5j01mqnFFMpp3Q9YtzKtrcvp3bccWr/wC48T1aEV/XLIkLnZkpl1Nvw70805HWq4mTwSQyJlkjVa5PeimPG8WT8Xf/AHVHwfatpn0lXLTyfqjerfqfE2IncbUlE9GVy6SCotr3e1GvSxovwrv7lx/yN41MphUznZtIlo5cfVV5pqtVxG12rJ82LsX+/ItrFyiKi5RfdxMnmY+t9/a1htuukU0mtvqm91VIjcRo7Wj+xdqd27kcopHpQtvSU1PcmN9qJejkx8K7u5f9ibmjx8nyY4lBevW2not9U6irYalu+N+VROKcU7slXpntliZIx2WPRHIqcUUkBQtCK7rNsWnc7MlOur+1d3mnIg5lN1iyTDbzp6dMrf12yPka3MlMvSJj3cfDbyJoWpGtexWuaitcmFReJI71Qutt0qKRc4jf7OeLV2p4YPOFk3E0kzV87eEAF5AAAAbHQWgwyeve3avZsz3r5eJkYo3SysjjarnvXVaicVUqtBSNoKCClbjEbMKqcV4r35KvKv1r1+02Gu52SE80kret3STVXMcXZt5b/HJtb/W9Rts0yLh6pqs+5f74E13rld5Hw6f3Z1mt6AAXlcAAAAAAAAAAAAAAAAAAAAAAABptBLd1u6rUvbmOmTW28Xru815IU1hwNFLd6utEUbm4lk7ST6rw5Jg69ZVx0NFPVS/ohYrl+eOHMx+RecmTwuY461YT0jXPrFxioGOyymTWfji9fwmO9THn1qp5KqplqJXZkler3L81PkamKkUpFVW1u07AASOWg0Jr+p3lsTnYjqU6Nfrw8dnMokhHWPdG9r2uVHNXKKnArFurG3C3wVTcdozK44LxTvyZ3MpqYus4beNMbpxRdHVRVjW+zKmo/HxJu8P4MuUy/wBF1+2TwImX41mfcm7+/Mme7YpY4t+1NfSPNXVthYdBLl6ysECOdman7F+fluXux4keNb6Nrn1O9rSPdiKrbq7eD02p5pzHKx98c/48xW1ZSbvRx3CgqKST9MrFb9PcvJcENnhkp55IZG6skblY5PcqbC9yEq9IVu6reEq2NxHVNyuOD02L5eJU4OTVpp9pc1fG2VO1ojX9RvMSOdiOfs3c93jg4p/UXCoucKm3YaV6xas1lXidTtaozHeka3ZbTXJjd3ZSY708/A0Wj1d6xtVPU5y9zdV6e5ybFPXdaFtztdTRuxmRmGqvB29F78GRjtOLJuVu0dqowD9PY6N7mParXNXVVF4Kh+TZUwAAaTQa39aui1Lm5jpk1tvFy7vNeRvZOJz9Fbd6vskLXNxLKnSvzwzuTkmD1107KWmlqJFwyNquXkZOa/yZJ0uY69asTptXdLWR0bXezEms/HxL+E/kzJ9amd9TUyzyLl8jlcvM+Rp46dKxVVtbtOwAHbkAAAAAAAAAAAAAAAAAAAAADr6L2/1hd4mubmKPtH/NE4c1wcgoWhNB1W2dO5uJKldbbwam7zXmQ8jJ0pKTHXtZqIzKekS5dHSQW5jvalXpJMfCm7vX/U1cZz6/Rm23OrdU1TJXSORE2SKmMGXhtWl+1lm8TMahJQVZug9jXfBL/wBqn0TQSwrvgl/7lL383H/qv8NklBWn6C2FN0Ev/cp8X6E2Nu6CX/tUfzcf+nw2Ss2mgVdrRT0LnbWr0jEX3LsXy7zsv0NsyboZf+1T+0ej1vt9S2opmSNkai73qucnGXkY8lJq7pjtWdvZITrSWi6ndZUamI5e0bz3+OSiyGb0uo+noEqGpl8C5/au/wAiLjX63/XeWu6sSfSCaSnnjmidqyRuR7VTgqbUPmDUVF0t1cy5W6nrI/0zMR2E4LxTkuTh6aW71hZJka3MsHas5b/DJy/Rnc+kpai2Pdl0S9LGi/Cu/uXH/I2EqZRUXaimLas4cvj0uRPeqFg6WkNB6su9RTImGI7WZ9q7U/vyOabNbRaNwqTGp02Xo7uGpUT297tkidIzPvTf4Y7ihMIpbqt9BXwVcf6ono7HvTinNMlopZWTwxzRu1mSNRzVTiimZzMfW3b7WcNtxpNNPrb1G+Ona3EVUnSJj4v8vHb+4zJV9O7b1+wPla3MtKvStx8P+Xht5EoLfFyd8cf4hy11YOrozbvWd5ggVuY2rryfan52JzOUUX0eW3oLdLXvbh9QuqzPBiflc9yHfIyfHSZeY69rNLIY/Tyv6Kliomu9qZdZ+PhT8r/BsJVwiquxEJNf6/1jdZ6hFzHnVZ9qbvzzKHEp2vv6WMttV05wANVUAAAAAAAAAAAAAAAAAAAAAAAAey1UTq+4Q0yZw93tKnBqbyqQtaxjWtaiNamEROBkNCKHUilrXJ7T11GZ9yb/AB/g2EZmcq/a2o9LWKuq7fyruVHb0YtXUMi1/wBOtxx/UPmzSeypvuEXcv4J7pbcfWF4l1XZig7NmOON69+fA4pJTh1tWJtPlxbNMT4WJmlVjTfcYu5fwfRullhTfcou5fwRkHX8Gn3Lz5pWZ+ldhXdcou5fwfB+lNjXdcIu5fwSAD+DT7k+aVXfpLZl3XCLuX8HwfpFaF3V0Xcv4JeD2OFT7k+eVTp6ynro1kppWysRdVVTgp+J2NlY+N6Za9NVU96KZHQyt6GvfTOdhk6ZTPxJ/wCZNg7eVcuP47aT0t2rtM62ndSVctO7fG7V+p8TS6Y0erNFWNTY9NR/1Td4fwZo0sV+9YlUvXrOnS0cuPqq801Uq4Y12rJ82LsX+/IsMioqZRcoqZynEhhVdDrj6wsMKOdmWn7J+eON3hjxKnNx/wBXS4benG9IVB0kENe1vtRr0b8fCu7uX/YwZYrnSsraKemk/TIxW/T3LyJBNE6GZ8UjcPY5WuT3KhJw79qdfp5mrqdvwUz0eXHrVpWlc7MlK7V28WLtTzTkTM72hdx9X32FXOxFP2T8/PcvfjxJOTj745cY7dbK5qtkYrXNRWuTCou3JFL7b3Wq71NGucRv9hV4tXanhgtrDCek+2ZbTXONv/8AGXHe1f58Chw8nW/WfafNXddsNQUsldWwUsSZfK9GJ8slngp46Slipom4jiYjG/RDDejS2dNVz3KRuWwJ0cefiXf3J/sb6Q65eTtfrHp5hrqNs3plcOoWaVGuxLP2TMcM717s+BLzSadXHrd4Wna7MdKmps4uXf5JyM2XOLj6Y/1FltuwACwjAAAAAAAAAAAAAAAAAAAAAA+lPC+pnjhjTL3u1U5nzNHodRdJUSVjm+zGmqzPxLv8P5OMl+lZl1SvadNfQwMpqaKCNMNjbqp8z53+4erbTNM12JHJqR/cv42ryPTGYzTSv6xXspGuyynTbji5fwmPEzcNPkyeVq9utWbABqqYAAAAAAAD6QTOp545o1w+NyOTkUqCdtTBHOxfZkajk5kxNhofV9LRvpXL7US5b9q/+57yryqbr2+k2G2p06t3pOvW+aDGXKmWfcm4napjKKmFTZtKgYTSWj6pdHq1MMl7RvPf45I+JfUzV1mr7ck0+gNx6pd1pnOxHVN1dvBybU805mYP3DK+GVksbtV7HI5qpwVC3kp3rNUFZ1O1mk4k501oerXRKlrcMqEzs+JN/kb2iq2V9BBVs/TKxHYTgvFOS5OPpXRddtMqNbmSLtGct/hky+PeceTz+LeSO1U3CLhUVFwqAGuprRoxcfWtmpqlXZkVurJ9ybF/PM9l5t7braamidjMrMNVeDk2ovfgwfoyuXR1c9te72Zk6SPPxJv70/1KU0xM9JxZfH7C5Se1XH0etnqiy01IqIkiN1pMcXrtX8cj83yubbbZUVbsdmzLUXi7cid+DrScSd+kq5ZfBbY3bE7WTHcifz4DDWcuTz7LT1qw8j3SPdI9yue5dZVXiqn5ANtTAAAAAAAAAAAAAAAAAAAAAAAAf1qK5UaiKqquExxKLaqRKGgip0xrNTLscXLvMnorRdZuKSubmOBNb6u4f35G3KPLvuesLGGvjb8VdU2hopal+6Nuce9eCd+CaSyOmlfJI7L3rrOVeKqafTKu9mKha7f2j8eCfz4GVJOLTrXtPtzmtudAALSEAAAAAAAAOjYKvqVzieq4Y9dR/wBF/qHOB5asWjUvYnU7VE4mldH1i3dM1MvgXW/au/y7j2WOr67bIZVXL0TUf9U/qd57XsbIxzHJlrk1VReKKZUTOO/4uTEWqmAPRX0zqSslp3b2Oxt4pw8MHnNWJ3G1KfDcaA1+vTz297tsa9IzPuXf447zTSplFRdqKTCx13q66QVOcMR2q/5tXYpT5FymUXKLtTBm8mnW+/taw23XSX3qj6jc54ETDEXWZ9q7jwmw01o9eGKsam1i6j/ou7x/kx5ew370iUF69baeq21klvr4KuP9cL0d9fenPaXSkmjqaeKeJ2tHIxHtX3ou0gJU/Rpc+t2d9E92ZKR2EzxYu1PHPgVedj3WLx6SYbedNTVSshifLI5GsY1XOVeCIQ+71z7lcqisflFlflEXgnBOSYKR6Rrn1OzpSMdiWrXV2cGJtXyTmpKxwceqzefZmtudAAL6AAAAAAAAAAAAAAAAAAAAAAAABvtHKLqVsYjm4kl9t/yzuTuwdGV7Yo3yPdhrE1lVeCITLXd8Tu8K9yptc5UX5lO3Fm07mU8ZtRqIfavqnVlZLUO3vcq/ROCd2DzgFuI1GoQTOwAHoAAAAAAAAAADRaHVfR1MtI5fZlTWb9U/8/g15L0XC5RcL8j+67vid3lbLxu9u20tMvWNNJplSYfDWNTY7s3/AF3p59xmT9K5yphXKqfNT8k2Os0r1mXFrdp2FF0Xruu2aJHOzJD2buW7wwTo7+htd1a5LTuXDKhNX9ybvPvIuTTtT8dYras19wp21dNLA79MjdX6E0ljdFK+N6YexdVU9yoVGTeYjSyj6C4JUNTDJ0z+5N/kQcS+pmqXNXcbcI7+hFz9WaQwOe7EM69DJn57l5Lg4ALt6xes1lXidTt39Nrn6zv87muzDAvRR4443rzXPgcAAUrFKxWCZ3OwAHTwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP1G90UrJGOw9i6yKnBUPyAKZSVLaykhqG7pG630Xih4NI6PrdrkREy+LtG8t/hk52htZrQy0bnbWLrs+i7/HHeaXemFMq0TiyeFysxeqXA9t4pOo3GaFEwxF1mfau48RqRMTG4VJjU6AAevAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7LRV9RuEM+cNRcP+1d5REXKIqLlF27CXm80arOt2uNHLl8XZu5bvDBT5dPEWT4beng0xo9eCKsam1i6j/ou7x/kyRS6ynbV0stO79MjdX6E3ljdFK+N6YexdVU9yodcW+69fp5mrqdvwAC0hAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA7midZ1e4rC5cMnTV/cm7z7zhn6je6N7XscqOausipwVDi9e9Zq9rbrO1MlljhYr5HtYxN6uXCIYTSGWlmub5aWRHteiK5UTZrcfI8VTVVFW/WqJXyO/8A0u4+JFhwfHO5lJkydvAACwiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//2Q==
+                  imageShape: RECTANGLE
+                  isLoading: false
+                  isVisible: true
+                  left:
+                    mode: gridUnit
+                    value: 2
+                  maxZoomLevel: 1
+                  parentId: sdcaksnv2d
+                  top:
+                    mode: gridUnit
+                    value: 11
+                  type: IMAGE_WIDGET
+                  widgetId: jvtoakef1d
+                  widgetName: Image1
+                  width:
+                    mode: gridUnit
+                    value: 12
+                - appMode: EDIT
+                  backgroundColor: "#2c2c2c"
+                  border:
+                    bottom:
+                      width:
+                        mode: px
+                        value: 0
+                    left:
+                      width:
+                        mode: px
+                        value: 0
+                    right:
+                      width:
+                        mode: px
+                        value: 0
+                    top:
+                      width:
+                        mode: px
+                        value: 0
+                  children:
+                    - alignment: STRETCH
+                      appMode: EDIT
+                      canExtend: true
+                      children:
+                        - animateLoading: true
+                          appMode: EDIT
+                          backgroundColor: "{{ ['/'].includes(Global.URL.currentRoute) ? `#5a4a3b` :
+                            `#2c2c2c` }}"
+                          buttonStyle: PRIMARY_BUTTON
+                          collapseWhenHidden: true
+                          docsUrl: https://docs.superblocks.com/components/button
+                          dynamicBindingPathList:
+                            - key: backgroundColor
+                            - key: icon
+                          dynamicPropertyPathList:
+                            - key: backgroundColor
+                            - key: textColor
+                          dynamicTriggerPathList:
+                            - key: onClick
+                          gridColumns: 14
+                          height:
+                            mode: px
+                            value: 28
+                          icon: "{{ icons.home }}"
+                          iconPosition: LEFT
+                          isDefaultClickDisabled: true
+                          isDisabled: false
+                          isLoading: false
+                          isVisible: true
+                          left:
+                            mode: gridUnit
+                            value: 0
+                          onClick:
+                            - id: d18sf9ah6v
+                              routeId: ahjjxoy521
+                              routePathDescriptor: /
+                              type: navigateToRoute
+                          parentId: zfcuidyont
+                          text: Overview
+                          textAlignment: LEFT
+                          textColor: ""
+                          top:
+                            mode: gridUnit
+                            value: 58
+                          type: BUTTON_WIDGET
+                          widgetId: 3df6zbfupm
+                          widgetName: Button3
+                          width:
+                            mode: gridUnit
+                            value: 14
+                        - animateLoading: true
+                          appMode: EDIT
+                          backgroundColor: "{{ ['/project-list'].includes(Global.URL.currentRoute) ?
+                            `#5a4a3b` : `#2c2c2c` }}"
+                          buttonStyle: PRIMARY_BUTTON
+                          collapseWhenHidden: true
+                          docsUrl: https://docs.superblocks.com/components/button
+                          dynamicBindingPathList:
+                            - key: backgroundColor
+                            - key: icon
+                          dynamicPropertyPathList:
+                            - key: backgroundColor
+                            - key: textColor
+                          dynamicTriggerPathList:
+                            - key: onClick
+                          gridColumns: 14
+                          height:
+                            mode: px
+                            value: 28
+                          icon: "{{ icons.format_list_bulleted }}"
+                          iconPosition: LEFT
+                          isDefaultClickDisabled: true
+                          isDisabled: false
+                          isLoading: false
+                          isVisible: true
+                          left:
+                            mode: gridUnit
+                            value: 0
+                          onClick:
+                            - id: gpkxe6533z
+                              routeId: 66a293ce-1c1c-40b0-9abb-9bec92c3dca1
+                              routePathDescriptor: /project-list
+                              type: navigateToRoute
+                          parentId: zfcuidyont
+                          text: Project List
+                          textAlignment: LEFT
+                          textColor: ""
+                          top:
+                            mode: gridUnit
+                            value: 0
+                          type: BUTTON_WIDGET
+                          widgetId: n0guqmb0l3
+                          widgetName: Button1
+                          width:
+                            mode: gridUnit
+                            value: 14
+                        - animateLoading: true
+                          appMode: EDIT
+                          backgroundColor: "{{ ['/project-details'].includes(Global.URL.currentRoute) ?
+                            `#5a4a3b` : `#2c2c2c` }}"
+                          buttonStyle: PRIMARY_BUTTON
+                          collapseWhenHidden: true
+                          docsUrl: https://docs.superblocks.com/components/button
+                          dynamicBindingPathList:
+                            - key: backgroundColor
+                            - key: icon
+                          dynamicPropertyPathList:
+                            - key: backgroundColor
+                            - key: textColor
+                          dynamicTriggerPathList: []
+                          gridColumns: 14
+                          height:
+                            mode: px
+                            value: 28
+                          icon: "{{ icons.article }}"
+                          iconPosition: LEFT
+                          isDefaultClickDisabled: true
+                          isDisabled: false
+                          isLoading: false
+                          isVisible: true
+                          left:
+                            mode: gridUnit
+                            value: 0
+                          parentId: zfcuidyont
+                          text: Project Details
+                          textAlignment: LEFT
+                          textColor: ""
+                          top:
+                            mode: gridUnit
+                            value: 29
+                          type: BUTTON_WIDGET
+                          widgetId: 6941e9by0l
+                          widgetName: Button2
+                          width:
+                            mode: gridUnit
+                            value: 14
+                        - animateLoading: true
+                          appMode: EDIT
+                          backgroundColor: "{{ ['/job-list'].includes(Global.URL.currentRoute) ? `#5a4a3b`
+                            : `#2c2c2c` }}"
+                          buttonStyle: PRIMARY_BUTTON
+                          collapseWhenHidden: true
+                          docsUrl: https://docs.superblocks.com/components/button
+                          dynamicBindingPathList:
+                            - key: backgroundColor
+                            - key: icon
+                          dynamicPropertyPathList:
+                            - key: backgroundColor
+                            - key: textColor
+                          dynamicTriggerPathList:
+                            - key: onClick
+                          gridColumns: 14
+                          height:
+                            mode: px
+                            value: 28
+                          icon: "{{ icons.article }}"
+                          iconPosition: LEFT
+                          isDefaultClickDisabled: true
+                          isDisabled: false
+                          isLoading: false
+                          isVisible: true
+                          left:
+                            mode: gridUnit
+                            value: 0
+                          onClick:
+                            - id: 8ejorry5mo
+                              routeId: 65fa7792-296d-4327-b1ff-f8c5567e29a9
+                              routePathDescriptor: /job-list
+                              type: navigateToRoute
+                          parentId: zfcuidyont
+                          text: Job List
+                          textAlignment: LEFT
+                          textColor: ""
+                          top:
+                            mode: gridUnit
+                            value: 87
+                          type: BUTTON_WIDGET
+                          widgetId: 2ms391tios
+                          widgetName: Button8
+                          width:
+                            mode: gridUnit
+                            value: 14
+                      collapseWhenHidden: true
+                      detachFromLayout: true
+                      distribution: TOP
+                      dynamicBindingPathList: []
+                      dynamicTriggerPathList: []
+                      gridColumns: 16
+                      height:
+                        mode: gridUnit
+                        value: 90
+                      isLoading: false
+                      isVisible: true
+                      layout: VSTACK
+                      left:
+                        mode: gridUnit
+                        value: 0
+                      padding:
+                        bottom:
+                          mode: px
+                          value: 6
+                        left:
+                          mode: px
+                          value: 6
+                        right:
+                          mode: px
+                          value: 6
+                        top:
+                          mode: px
+                          value: 6
+                      parentId: bzorxpzbt0
+                      spacing:
+                        mode: px
+                        value: 0
+                      top:
+                        mode: gridUnit
+                        value: 0
+                      type: CANVAS_WIDGET
+                      widgetId: zfcuidyont
+                      widgetName: Canvas4
+                      width:
+                        mode: gridUnit
+                        value: 16
+                  collapseWhenHidden: true
+                  dynamicBindingPathList: []
+                  dynamicTriggerPathList: []
+                  gridColumns: 16
+                  height:
+                    mode: fitContent
+                    value: 10.333333333333334
+                  isLoading: false
+                  isVisible: true
+                  left:
+                    mode: gridUnit
+                    value: 0
+                  parentId: sdcaksnv2d
+                  shouldScrollContents: true
+                  top:
+                    mode: gridUnit
+                    value: 0
+                  type: CONTAINER_WIDGET
+                  widgetId: bzorxpzbt0
+                  widgetName: MainNavItems
+                  width:
+                    mode: gridUnit
+                    value: 16
+              collapseWhenHidden: false
+              detachFromLayout: true
+              distribution: TOP
+              dragDisabled: true
+              dynamicBindingPathList: []
+              dynamicTriggerPathList: []
+              gridColumns: 16
+              height:
+                mode: fitContent
+                value: 19.333333333333332
+              isLoading: false
+              isVisible: true
+              layout: VSTACK
+              left:
+                mode: gridUnit
+                value: 0
+              minHeight:
+                mode: px
+                value: 1292
+              parentId: lm2jrimm2x
+              shouldScrollContents: true
+              spacing:
+                mode: px
+                value: 12
+              top:
+                mode: gridUnit
+                value: 0
+              type: CANVAS_WIDGET
+              widgetId: sdcaksnv2d
+              widgetName: Canvas3
+              width:
+                mode: gridUnit
+                value: 16
+            - backgroundColor: "#f0f0f0"
+              canExtend: true
+              children:
+                - animateLoading: true
+                  appMode: EDIT
+                  collapseWhenHidden: true
+                  dynamicBindingPathList:
+                    - key: text
+                  dynamicTriggerPathList: []
+                  gridColumns: 25
+                  height:
+                    mode: fitContent
+                    value: 3
+                  isLoading: false
+                  isVisible: true
+                  left:
+                    mode: gridUnit
+                    value: 1
+                  parentId: dwpvpsnarl
+                  text: "{{ getProjectDetails.response[0].ProjectName }}"
+                  textAlign: LEFT
+                  textProps:
+                    textStyle:
+                      variant: heading3
+                  textStyle: LABEL
+                  textType: text
+                  top:
+                    mode: gridUnit
+                    value: 7
+                  type: TEXT_WIDGET
+                  verticalAlign: AUTO
+                  widgetId: b7vbbubzgk
+                  widgetName: Text1
+                  width:
+                    mode: gridUnit
+                    value: 25
+                - animateLoading: true
+                  appMode: EDIT
+                  collapseWhenHidden: true
+                  dynamicBindingPathList:
+                    - key: isVisible
+                  dynamicPropertyPathList:
+                    - key: isVisible
+                  dynamicTriggerPathList: []
+                  gridColumns: 25
+                  height:
+                    mode: fitContent
+                    value: 2
+                  isLoading: false
+                  isVisible: "{{Dropdown1.selectedOptionValue}}"
+                  left:
+                    mode: gridUnit
+                    value: 1
+                  parentId: dwpvpsnarl
+                  text: other project details to go here ......
+                  textAlign: LEFT
+                  textStyle: LABEL
+                  textType: text
+                  top:
+                    mode: gridUnit
+                    value: 17
+                  type: TEXT_WIDGET
+                  verticalAlign: AUTO
+                  widgetId: js1r9pwjbu
+                  widgetName: Text2
+                  width:
+                    mode: gridUnit
+                    value: 25
+                - appMode: EDIT
+                  backgroundColor: transparent
+                  border:
+                    bottom:
+                      width:
+                        mode: px
+                        value: 0
+                    left:
+                      width:
+                        mode: px
+                        value: 0
+                    right:
+                      width:
+                        mode: px
+                        value: 0
+                    top:
+                      width:
+                        mode: px
+                        value: 0
+                  children:
+                    - appMode: EDIT
+                      canExtend: false
+                      children:
+                        - animateLoading: true
+                          appMode: EDIT
+                          clientSideFiltering: false
+                          collapseWhenHidden: true
+                          defaultOptionValue: '{{Global.URL.queryParams ? Global.URL.queryParams.projectID
+                            : ""}}'
+                          dynamicBindingPathList:
+                            - key: options
+                            - key: defaultOptionValue
+                          dynamicTriggerPathList:
+                            - key: onSearchTextChange
+                            - key: onOptionChange
+                          gridColumns: 40
+                          height:
+                            mode: gridUnit
+                            value: 3
+                          isLoading: false
+                          isVertical: false
+                          isVisible: true
+                          label: Select a Project
+                          left:
+                            mode: gridUnit
+                            value: 0
+                          onOptionChange:
+                            - apiNames:
+                                - getProjectDetails
+                              id: fir1vdah1f
+                              type: executeApi
+                          onSearchTextChange:
+                            - apiNames:
+                                - getProjects
+                              id: 5v53z753of
+                              type: executeApi
+                          options: "{{getProjects.response}}"
+                          parentId: 9jmzxscib1
+                          placeholderText: Type to search for a Project Name or Project ID
+                          top:
+                            mode: gridUnit
+                            value: 1
+                          transformation:
+                            label: ProjectName
+                            value: ProjectRecID
+                          type: DROP_DOWN_WIDGET
+                          widgetId: l9jvi0qr1a
+                          widgetName: Dropdown1
+                          width:
+                            mode: gridUnit
+                            value: 40
+                      collapseWhenHidden: true
+                      detachFromLayout: true
+                      dynamicBindingPathList: []
+                      dynamicTriggerPathList: []
+                      gridColumns: 80
+                      height:
+                        mode: fitContent
+                        value: 4
+                      isLoading: false
+                      isVisible: true
+                      left:
+                        mode: gridUnit
+                        value: 0
+                      parentId: vab9f6jvlk
+                      top:
+                        mode: gridUnit
+                        value: 0
+                      type: CANVAS_WIDGET
+                      widgetId: 9jmzxscib1
+                      widgetName: Canvas8
+                      width:
+                        mode: gridUnit
+                        value: 80
+                  collapseWhenHidden: true
+                  dynamicBindingPathList: []
+                  dynamicTriggerPathList: []
+                  gridColumns: 80
+                  height:
+                    mode: fitContent
+                    value: 6
+                  isLoading: false
+                  isVisible: true
+                  left:
+                    mode: gridUnit
+                    value: 0
+                  parentId: dwpvpsnarl
+                  shouldScrollContents: true
+                  top:
+                    mode: gridUnit
+                    value: 0
+                  type: CONTAINER_WIDGET
+                  widgetId: vab9f6jvlk
+                  widgetName: Container1
+                  width:
+                    mode: gridUnit
+                    value: 80
+                - animateLoading: true
+                  appMode: EDIT
+                  collapseWhenHidden: true
+                  defaultText: "{{getProjectDetails.response[0].ProjectRecID}}"
+                  docsUrl: https://docs.superblocks.com/components/input
+                  dynamicBindingPathList:
+                    - key: defaultText
+                    - key: isVisible
+                  dynamicPropertyPathList:
+                    - key: isVisible
+                  dynamicTriggerPathList: []
+                  gridColumns: 16
+                  height:
+                    mode: gridUnit
+                    value: 5
+                  iconPosition: LEFT
+                  inputType: TEXT
+                  isLoading: false
+                  isVertical: true
+                  isVisible: "{{Dropdown1.selectedOptionValue}}"
+                  label: Project Number
+                  left:
+                    mode: gridUnit
+                    value: 1
+                  parentId: dwpvpsnarl
+                  placeholderText: Enter text
+                  top:
+                    mode: gridUnit
+                    value: 11
+                  type: INPUT_WIDGET
+                  widgetId: ij74hufneq
+                  widgetName: Input1
+                  width:
+                    mode: gridUnit
+                    value: 16
+                - animateLoading: true
+                  appMode: EDIT
+                  collapseWhenHidden: true
+                  dateFormat: YYYY-MM-DD
+                  datePickerType: DATE_PICKER
+                  defaultDate: '{{moment(getProjectDetails.response[0].ProjectDate).format("YYYY-MM-DD")}}'
+                  dynamicBindingPathList:
+                    - key: defaultDate
+                    - key: isVisible
+                  dynamicPropertyPathList:
+                    - key: defaultDate
+                    - key: isVisible
+                  dynamicTriggerPathList: []
+                  gridColumns: 23
+                  height:
+                    mode: fitContent
+                    value: 5
+                  isDisabled: false
+                  isLoading: false
+                  isVisible: "{{Dropdown1.selectedOptionValue}}"
+                  label: Release Date
+                  left:
+                    mode: gridUnit
+                    value: 18
+                  parentId: dwpvpsnarl
+                  showIcon: true
+                  top:
+                    mode: gridUnit
+                    value: 11
+                  twentyFourHourTime: true
+                  type: DATE_PICKER_WIDGET
+                  widgetId: ivfe1s9hrg
+                  widgetName: DatePicker1
+                  width:
+                    mode: gridUnit
+                    value: 23
+                - animateLoading: true
+                  appMode: EDIT
+                  collapseWhenHidden: true
+                  defaultText: "{{getProjectDetails.response[0].ProjectStatus}}"
+                  docsUrl: https://docs.superblocks.com/components/input
+                  dynamicBindingPathList:
+                    - key: defaultText
+                    - key: isVisible
+                  dynamicPropertyPathList:
+                    - key: isVisible
+                  dynamicTriggerPathList: []
+                  gridColumns: 11
+                  height:
+                    mode: gridUnit
+                    value: 5
+                  iconPosition: LEFT
+                  inputType: TEXT
+                  isLoading: false
+                  isVertical: true
+                  isVisible: "{{Dropdown1.selectedOptionValue}}"
+                  label: Project Status
+                  left:
+                    mode: gridUnit
+                    value: 42
+                  parentId: dwpvpsnarl
+                  placeholderText: Enter text
+                  top:
+                    mode: gridUnit
+                    value: 11
+                  type: INPUT_WIDGET
+                  widgetId: oeyyety2aj
+                  widgetName: Input2
+                  width:
+                    mode: gridUnit
+                    value: 11
+              collapseWhenHidden: false
+              detachFromLayout: true
+              dragDisabled: true
+              dynamicBindingPathList: []
+              dynamicTriggerPathList: []
+              gridColumns: 80
+              height:
+                mode: fitContent
+                value: 19
+              isLoading: false
+              isVisible: true
+              layout: FIXED_GRID
+              left:
+                mode: gridUnit
+                value: 0
+              minHeight:
+                mode: px
+                value: 1292
+              parentId: lm2jrimm2x
+              shouldScrollContents: true
+              top:
+                mode: gridUnit
+                value: 0
+              type: CANVAS_WIDGET
+              widgetId: dwpvpsnarl
+              widgetName: Canvas1
+              width:
+                mode: gridUnit
+                value: 80
+          collapseWhenHidden: true
+          detachFromLayout: true
+          dragDisabled: true
+          dynamicBindingPathList:
+            - key: backgroundColor
+          dynamicPropertyPathList:
+            - key: isVisible
+          dynamicTriggerPathList: []
+          gridColumns: 96
+          height:
+            mode: fillParent
+            value: 1
+          isLoading: false
+          isVisible: "true"
+          left:
+            mode: gridUnit
+            value: 0
+          parentId: "0"
+          shouldScrollContents: true
+          top:
+            mode: gridUnit
+            value: 0
+          type: SECTION_WIDGET
+          widgetId: lm2jrimm2x
+          widgetName: Section1
+          width:
+            mode: gridUnit
+            value: 96
+        - appMode: EDIT
+          canOutsideClickClose: true
+          children:
+            - appMode: EDIT
+              canExtend: true
+              children:
+                - appMode: EDIT
+                  canExtend: true
+                  children:
+                    - animateLoading: true
+                      appMode: EDIT
+                      collapseWhenHidden: true
+                      dynamicBindingPathList: []
+                      dynamicTriggerPathList: []
+                      gridColumns: 70
+                      height:
+                        mode: fitContent
+                        value: 3
+                      isLoading: false
+                      isVisible: true
+                      left:
+                        mode: gridUnit
+                        value: 0
+                      parentId: xo8qgq48tj
+                      text: Jobs
+                      textAlign: LEFT
+                      textProps:
+                        textStyle:
+                          variant: heading3
+                      textStyle: HEADING_1
+                      textType: text
+                      top:
+                        mode: gridUnit
+                        value: 0
+                      type: TEXT_WIDGET
+                      verticalAlign: AUTO
+                      widgetId: d5ciha6jz2
+                      widgetName: Text4
+                      width:
+                        mode: gridUnit
+                        value: 70
+                  collapseWhenHidden: true
+                  detachFromLayout: true
+                  gridColumns: 80
+                  height:
+                    mode: fitContent
+                    value: 69
+                  isDisabled: false
+                  isLoading: false
+                  isVisible: true
+                  left:
+                    mode: gridUnit
+                    value: 0
+                  parentId: rpg5c9p4uw
+                  shouldScrollContents: true
+                  top:
+                    mode: gridUnit
+                    value: 0
+                  type: CANVAS_WIDGET
+                  widgetId: xo8qgq48tj
+                  widgetName: Canvas6
+                  width:
+                    mode: gridUnit
+                    value: 0
+              collapseWhenHidden: true
+              detachFromLayout: true
+              dragDisabled: true
+              gridColumns: 1
+              height:
+                mode: fitContent
+                value: 5
+              isLoading: false
+              isVisible: true
+              left:
+                mode: gridUnit
+                value: 0
+              parentId: elniaap2oc
+              top:
+                mode: gridUnit
+                value: 0
+              type: SECTION_WIDGET
+              widgetId: rpg5c9p4uw
+              widgetName: Section2
+              width:
+                mode: gridUnit
+                value: 1
+            - appMode: EDIT
+              canExtend: true
+              children:
+                - alignment: STRETCH
+                  appMode: EDIT
+                  canExtend: true
+                  children:
+                    - animateLoading: true
+                      appMode: EDIT
+                      buttonStyle: SECONDARY_BUTTON
+                      collapseWhenHidden: true
+                      docsUrl: https://docs.superblocks.com/components/button
+                      dynamicBindingPathList:
+                        - key: icon
+                      dynamicTriggerPathList: []
+                      gridColumns: 34
+                      height:
+                        mode: fitContent
+                        value: 3
+                      icon: "{{ icons.add }}"
+                      iconPosition: LEFT
+                      isDefaultClickDisabled: true
+                      isDisabled: false
+                      isLoading: false
+                      isVisible: true
+                      left:
+                        mode: gridUnit
+                        value: 57
+                      parentId: ra7emcsbrx
+                      text: Add Job
+                      top:
+                        mode: gridUnit
+                        value: 32
+                      type: BUTTON_WIDGET
+                      widgetId: uhzxay6tq0
+                      widgetName: Button5
+                      width:
+                        mode: gridUnit
+                        value: 23
+                    - animateLoading: true
+                      appMode: EDIT
+                      border:
+                        bottom:
+                          width:
+                            mode: px
+                            value: 0
+                        left:
+                          width:
+                            mode: px
+                            value: 0
+                        right:
+                          width:
+                            mode: px
+                            value: 0
+                        top:
+                          width:
+                            mode: px
+                            value: 0
+                      cachedColumnSettings:
+                        action:
+                          buttonLabel: Approve
+                          columnType: button
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.action })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: action
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 5
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: action
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.action })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.action })}}"
+                          notation: standard
+                          onClick:
+                            - code: showAlert(currentRow.name + ' is approved!', 'success')
+                              id: id0
+                              newWindow: true
+                              type: runJs
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        date_joined:
+                          columnType: date
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.date_joined })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: date_joined
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 2
+                          inputFormat: YYYY-MM-DD
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: date joined
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.date_joined })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.date_joined })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          outputFormat: MM-DD-YYYY
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        photo:
+                          columnType: image
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.photo })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: photo
+                          imageBorderRadius:
+                            mode: "%"
+                            value: 50
+                          imageSize: FIXED
+                          index: 3
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: photo
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.photo })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.photo })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        twitter:
+                          columnType: link
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.twitter })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: twitter
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 1
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: twitter
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return '@' +
+                            currentRow.twitter?.split('/').pop()})}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.twitter })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                      cellProps:
+                        textStyle:
+                          variant: body2
+                      collapseWhenHidden: true
+                      columnOrder:
+                        - JobDate
+                        - JobName
+                        - JobVersion
+                        - CreatedBy
+                        - CreatedOn
+                        - JobClientContactID
+                        - JobClientRecID
+                        - JobClientShippingID
+                        - JobDescription
+                        - JobFinishFlag
+                        - JobFinishingListFlag
+                        - JobFinishingStatus
+                        - JobGraphics
+                        - JobName2REVISING
+                        - JobName2REVISINGWithDuration
+                        - JobNameFullREVISING1
+                        - JobNotes
+                        - JobPostingFlag
+                        - JobPriceLevel
+                        - JobPricing
+                        - JobProducerID
+                        - JobProjectRecID
+                        - JobProjectRecIDMergeFrom
+                        - JobRecID
+                        - JobSerialNumber
+                        - JobStatus
+                        - JobTaxStatus
+                        - JobVersionNumber
+                        - JobVersionREVISING
+                        - JobsCategoryDigital
+                        - JobsCategoryDigitalMisc
+                        - JobsCategoryNonDigital
+                        - JobsFormatDigital
+                        - JobsTRTDigital
+                        - LastModifiedBy
+                        - LastModifiedOn
+                        - UUID
+                        - fmUUID
+                      columnSizeMap:
+                        JobDate: 183
+                        JobName2REVISING: 341
+                        JobName2REVISINGWithDuration: 358
+                        JobNameFullREVISING1: 331
+                      compactMode: SHORT
+                      defaultFilters: "{}"
+                      defaultSelectedRow: "0"
+                      derivedColumns: {}
+                      dynamicBindingPathList:
+                        - key: tableData
+                        - key: primaryColumns.CreatedBy.computedValue
+                        - key: primaryColumns.CreatedBy.linkUrl
+                        - key: primaryColumns.CreatedBy.linkLabel
+                        - key: primaryColumns.CreatedOn.computedValue
+                        - key: primaryColumns.CreatedOn.linkUrl
+                        - key: primaryColumns.CreatedOn.linkLabel
+                        - key: primaryColumns.JobClientContactID.computedValue
+                        - key: primaryColumns.JobClientContactID.linkUrl
+                        - key: primaryColumns.JobClientContactID.linkLabel
+                        - key: primaryColumns.JobClientRecID.computedValue
+                        - key: primaryColumns.JobClientRecID.linkUrl
+                        - key: primaryColumns.JobClientRecID.linkLabel
+                        - key: primaryColumns.JobClientShippingID.computedValue
+                        - key: primaryColumns.JobClientShippingID.linkUrl
+                        - key: primaryColumns.JobClientShippingID.linkLabel
+                        - key: primaryColumns.JobDate.computedValue
+                        - key: primaryColumns.JobDate.linkUrl
+                        - key: primaryColumns.JobDate.linkLabel
+                        - key: primaryColumns.JobDescription.computedValue
+                        - key: primaryColumns.JobDescription.linkUrl
+                        - key: primaryColumns.JobDescription.linkLabel
+                        - key: primaryColumns.JobFinishFlag.computedValue
+                        - key: primaryColumns.JobFinishFlag.linkUrl
+                        - key: primaryColumns.JobFinishFlag.linkLabel
+                        - key: primaryColumns.JobFinishingListFlag.computedValue
+                        - key: primaryColumns.JobFinishingListFlag.linkUrl
+                        - key: primaryColumns.JobFinishingListFlag.linkLabel
+                        - key: primaryColumns.JobFinishingStatus.computedValue
+                        - key: primaryColumns.JobFinishingStatus.linkUrl
+                        - key: primaryColumns.JobFinishingStatus.linkLabel
+                        - key: primaryColumns.JobGraphics.computedValue
+                        - key: primaryColumns.JobGraphics.linkUrl
+                        - key: primaryColumns.JobGraphics.linkLabel
+                        - key: primaryColumns.JobName.computedValue
+                        - key: primaryColumns.JobName.linkUrl
+                        - key: primaryColumns.JobName.linkLabel
+                        - key: primaryColumns.JobName2REVISING.computedValue
+                        - key: primaryColumns.JobName2REVISING.linkUrl
+                        - key: primaryColumns.JobName2REVISING.linkLabel
+                        - key: primaryColumns.JobName2REVISINGWithDuration.computedValue
+                        - key: primaryColumns.JobName2REVISINGWithDuration.linkUrl
+                        - key: primaryColumns.JobName2REVISINGWithDuration.linkLabel
+                        - key: primaryColumns.JobNameFullREVISING1.computedValue
+                        - key: primaryColumns.JobNameFullREVISING1.linkUrl
+                        - key: primaryColumns.JobNameFullREVISING1.linkLabel
+                        - key: primaryColumns.JobNotes.computedValue
+                        - key: primaryColumns.JobNotes.linkUrl
+                        - key: primaryColumns.JobNotes.linkLabel
+                        - key: primaryColumns.JobPostingFlag.computedValue
+                        - key: primaryColumns.JobPostingFlag.linkUrl
+                        - key: primaryColumns.JobPostingFlag.linkLabel
+                        - key: primaryColumns.JobPriceLevel.computedValue
+                        - key: primaryColumns.JobPriceLevel.linkUrl
+                        - key: primaryColumns.JobPriceLevel.linkLabel
+                        - key: primaryColumns.JobPricing.computedValue
+                        - key: primaryColumns.JobPricing.linkUrl
+                        - key: primaryColumns.JobPricing.linkLabel
+                        - key: primaryColumns.JobProducerID.computedValue
+                        - key: primaryColumns.JobProducerID.linkUrl
+                        - key: primaryColumns.JobProducerID.linkLabel
+                        - key: primaryColumns.JobProjectRecID.computedValue
+                        - key: primaryColumns.JobProjectRecID.linkUrl
+                        - key: primaryColumns.JobProjectRecID.linkLabel
+                        - key: primaryColumns.JobProjectRecIDMergeFrom.computedValue
+                        - key: primaryColumns.JobProjectRecIDMergeFrom.linkUrl
+                        - key: primaryColumns.JobProjectRecIDMergeFrom.linkLabel
+                        - key: primaryColumns.JobRecID.computedValue
+                        - key: primaryColumns.JobRecID.linkUrl
+                        - key: primaryColumns.JobRecID.linkLabel
+                        - key: primaryColumns.JobSerialNumber.computedValue
+                        - key: primaryColumns.JobSerialNumber.linkUrl
+                        - key: primaryColumns.JobSerialNumber.linkLabel
+                        - key: primaryColumns.JobStatus.computedValue
+                        - key: primaryColumns.JobStatus.linkUrl
+                        - key: primaryColumns.JobStatus.linkLabel
+                        - key: primaryColumns.JobTaxStatus.computedValue
+                        - key: primaryColumns.JobTaxStatus.linkUrl
+                        - key: primaryColumns.JobTaxStatus.linkLabel
+                        - key: primaryColumns.JobVersion.computedValue
+                        - key: primaryColumns.JobVersion.linkUrl
+                        - key: primaryColumns.JobVersion.linkLabel
+                        - key: primaryColumns.JobVersionNumber.computedValue
+                        - key: primaryColumns.JobVersionNumber.linkUrl
+                        - key: primaryColumns.JobVersionNumber.linkLabel
+                        - key: primaryColumns.JobVersionREVISING.computedValue
+                        - key: primaryColumns.JobVersionREVISING.linkUrl
+                        - key: primaryColumns.JobVersionREVISING.linkLabel
+                        - key: primaryColumns.JobsCategoryDigital.computedValue
+                        - key: primaryColumns.JobsCategoryDigital.linkUrl
+                        - key: primaryColumns.JobsCategoryDigital.linkLabel
+                        - key: primaryColumns.JobsCategoryDigitalMisc.computedValue
+                        - key: primaryColumns.JobsCategoryDigitalMisc.linkUrl
+                        - key: primaryColumns.JobsCategoryDigitalMisc.linkLabel
+                        - key: primaryColumns.JobsCategoryNonDigital.computedValue
+                        - key: primaryColumns.JobsCategoryNonDigital.linkUrl
+                        - key: primaryColumns.JobsCategoryNonDigital.linkLabel
+                        - key: primaryColumns.JobsFormatDigital.computedValue
+                        - key: primaryColumns.JobsFormatDigital.linkUrl
+                        - key: primaryColumns.JobsFormatDigital.linkLabel
+                        - key: primaryColumns.JobsTRTDigital.computedValue
+                        - key: primaryColumns.JobsTRTDigital.linkUrl
+                        - key: primaryColumns.JobsTRTDigital.linkLabel
+                        - key: primaryColumns.LastModifiedBy.computedValue
+                        - key: primaryColumns.LastModifiedBy.linkUrl
+                        - key: primaryColumns.LastModifiedBy.linkLabel
+                        - key: primaryColumns.LastModifiedOn.computedValue
+                        - key: primaryColumns.LastModifiedOn.linkUrl
+                        - key: primaryColumns.LastModifiedOn.linkLabel
+                        - key: primaryColumns.UUID.computedValue
+                        - key: primaryColumns.UUID.linkUrl
+                        - key: primaryColumns.UUID.linkLabel
+                        - key: primaryColumns.fmUUID.computedValue
+                        - key: primaryColumns.fmUUID.linkUrl
+                        - key: primaryColumns.fmUUID.linkLabel
+                      dynamicTriggerPathList: []
+                      gridColumns: 80
+                      height:
+                        mode: gridUnit
+                        value: 32
+                      horizontalAlignment: LEFT
+                      isDownloadable: true
+                      isFilterable: true
+                      isLoading: false
+                      isSearchable: true
+                      isVisible: true
+                      label: Data
+                      left:
+                        mode: gridUnit
+                        value: 0
+                      pageType: NONE
+                      parentId: ra7emcsbrx
+                      primaryColumns:
+                        CreatedBy:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.CreatedBy })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: CreatedBy
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 0
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: CreatedBy
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.CreatedBy })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.CreatedBy })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        CreatedOn:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.CreatedOn })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: CreatedOn
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 1
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: CreatedOn
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.CreatedOn })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.CreatedOn })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobClientContactID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientContactID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobClientContactID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 2
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobClientContactID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientContactID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientContactID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobClientRecID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientRecID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobClientRecID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 3
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobClientRecID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientRecID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientRecID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobClientShippingID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientShippingID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobClientShippingID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 4
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobClientShippingID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientShippingID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobClientShippingID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobDate:
+                          columnType: date
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobDate })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobDate
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 5
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: JobDate
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobDate })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobDate })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          outputFormat: Do MMM YYYY
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobDescription:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobDescription })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobDescription
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 6
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: JobDescription
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobDescription })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobDescription })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobFinishFlag:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishFlag })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobFinishFlag
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 7
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobFinishFlag
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishFlag })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishFlag })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobFinishingListFlag:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishingListFlag })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobFinishingListFlag
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 8
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobFinishingListFlag
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishingListFlag })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishingListFlag })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobFinishingStatus:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishingStatus })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobFinishingStatus
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 9
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobFinishingStatus
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishingStatus })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobFinishingStatus })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobGraphics:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobGraphics })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobGraphics
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 10
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobGraphics
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobGraphics })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobGraphics })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobName:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobName
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 11
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: JobName
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobName2REVISING:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName2REVISING })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobName2REVISING
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 12
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobName2REVISING
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName2REVISING })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName2REVISING })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobName2REVISINGWithDuration:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName2REVISINGWithDuration })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobName2REVISINGWithDuration
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 13
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobName2REVISINGWithDuration
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName2REVISINGWithDuration })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobName2REVISINGWithDuration })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobNameFullREVISING1:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobNameFullREVISING1 })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobNameFullREVISING1
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 14
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobNameFullREVISING1
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobNameFullREVISING1 })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobNameFullREVISING1 })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobNotes:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobNotes })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobNotes
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 15
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobNotes
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobNotes })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobNotes })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobPostingFlag:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPostingFlag })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobPostingFlag
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 16
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobPostingFlag
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPostingFlag })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPostingFlag })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobPriceLevel:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPriceLevel })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobPriceLevel
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 17
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobPriceLevel
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPriceLevel })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPriceLevel })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobPricing:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPricing })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobPricing
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 18
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobPricing
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPricing })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobPricing })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobProducerID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProducerID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobProducerID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 19
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobProducerID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProducerID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProducerID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobProjectRecID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProjectRecID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobProjectRecID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 20
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobProjectRecID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProjectRecID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProjectRecID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobProjectRecIDMergeFrom:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProjectRecIDMergeFrom })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobProjectRecIDMergeFrom
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 21
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobProjectRecIDMergeFrom
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProjectRecIDMergeFrom })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobProjectRecIDMergeFrom })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobRecID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobRecID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobRecID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 22
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobRecID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobRecID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobRecID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobSerialNumber:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobSerialNumber })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobSerialNumber
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 23
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobSerialNumber
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobSerialNumber })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobSerialNumber })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobStatus:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobStatus })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobStatus
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 24
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobStatus
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobStatus })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobStatus })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobTaxStatus:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobTaxStatus })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobTaxStatus
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 25
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobTaxStatus
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobTaxStatus })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobTaxStatus })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobVersion:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersion })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobVersion
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 26
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: JobVersion
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersion })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersion })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobVersionNumber:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersionNumber })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobVersionNumber
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 27
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobVersionNumber
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersionNumber })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersionNumber })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobVersionREVISING:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersionREVISING })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobVersionREVISING
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 28
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobVersionREVISING
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersionREVISING })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobVersionREVISING })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobsCategoryDigital:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryDigital })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobsCategoryDigital
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 29
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: JobsCategoryDigital
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryDigital })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryDigital })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobsCategoryDigitalMisc:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryDigitalMisc })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobsCategoryDigitalMisc
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 30
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobsCategoryDigitalMisc
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryDigitalMisc })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryDigitalMisc })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobsCategoryNonDigital:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryNonDigital })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobsCategoryNonDigital
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 31
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: JobsCategoryNonDigital
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryNonDigital })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsCategoryNonDigital })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobsFormatDigital:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsFormatDigital })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobsFormatDigital
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 32
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: true
+                          label: JobsFormatDigital
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsFormatDigital })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsFormatDigital })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        JobsTRTDigital:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsTRTDigital })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: JobsTRTDigital
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 33
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: JobsTRTDigital
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsTRTDigital })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.JobsTRTDigital })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        LastModifiedBy:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.LastModifiedBy })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: LastModifiedBy
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 34
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: LastModifiedBy
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.LastModifiedBy })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.LastModifiedBy })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        LastModifiedOn:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.LastModifiedOn })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: LastModifiedOn
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 35
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: LastModifiedOn
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.LastModifiedOn })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.LastModifiedOn })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        UUID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.UUID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: UUID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 36
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: UUID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.UUID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.UUID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                        fmUUID:
+                          columnType: text
+                          computedValue: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.fmUUID })}}"
+                          enableFilter: true
+                          enableSort: true
+                          headerIconPosition: LEFT
+                          horizontalAlignment: LEFT
+                          id: fmUUID
+                          imageBorderRadius:
+                            mode: px
+                            value: 0
+                          imageSize: FIT
+                          index: 37
+                          isDerived: false
+                          isEditableOnInsertion: true
+                          isVisible: false
+                          label: fmUUID
+                          linkLabel: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.fmUUID })}}"
+                          linkUrl: "{{Table1.tableDataWithInserts.map((currentRow) => { return
+                            currentRow.fmUUID })}}"
+                          notation: standard
+                          openImageUrl: true
+                          openInNewTab: true
+                          tagDisplayConfig: {}
+                          textSize: PARAGRAPH
+                          useLabelAsDisplayValue: true
+                          verticalAlignment: CENTER
+                          width: 150
+                      tableData: "{{ getJobs.response }}"
+                      textSize: PARAGRAPH
+                      top:
+                        mode: gridUnit
+                        value: 0
+                      type: TABLE_WIDGET
+                      verticalAlignment: CENTER
+                      widgetId: lsl6hrbjv8
+                      widgetName: Table1
+                      width:
+                        mode: gridUnit
+                        value: 80
+                  collapseWhenHidden: true
+                  detachFromLayout: true
+                  distribution: TOP
+                  dynamicBindingPathList: []
+                  dynamicTriggerPathList: []
+                  gridColumns: 80
+                  height:
+                    mode: fitContent
+                    value: 35
+                  isDisabled: false
+                  isLoading: false
+                  isVisible: true
+                  layout: FIXED_GRID
+                  left:
+                    mode: gridUnit
+                    value: 0
+                  parentId: mqc0lfe7cr
+                  shouldScrollContents: true
+                  spacing:
+                    mode: px
+                    value: 12
+                  top:
+                    mode: gridUnit
+                    value: 0
+                  type: CANVAS_WIDGET
+                  widgetId: ra7emcsbrx
+                  widgetName: Canvas7
+                  width:
+                    mode: gridUnit
+                    value: 80
+              collapseWhenHidden: true
+              detachFromLayout: true
+              dragDisabled: true
+              dynamicBindingPathList: []
+              dynamicTriggerPathList: []
+              gridColumns: 1
+              height:
+                mode: fillParent
+                value: 1
+              isLoading: false
+              isVisible: true
+              left:
+                mode: gridUnit
+                value: 0
+              parentId: elniaap2oc
+              top:
+                mode: gridUnit
+                value: 0
+              type: SECTION_WIDGET
+              widgetId: mqc0lfe7cr
+              widgetName: Section3
+              width:
+                mode: gridUnit
+                value: 1
+          detachFromLayout: true
+          dynamicBindingPathList: []
+          dynamicTriggerPathList: []
+          gridColumns: 80
+          hasBackdrop: true
+          height:
+            mode: gridUnit
+            value: 69
+          isLoading: false
+          left:
+            mode: gridUnit
+            value: 0
+          parentId: "0"
+          shouldScrollContents: true
+          size: SMALL
+          top:
+            mode: gridUnit
+            value: 0
+          type: SLIDEOUT_WIDGET
+          widgetId: elniaap2oc
+          widgetName: Slideout1
+          width:
+            mode: gridUnit
+            value: 80
+      detachFromLayout: true
+      dynamicBindingPathList: []
+      embedding:
+        propertyMap: {}
+      events:
+        eventMap: {}
+      gridColumns: 96
+      height:
+        mode: gridUnit
+        value: 99
+      layoutVersion: 5
+      left:
+        mode: gridUnit
+        value: 0
+      minWidth:
+        mode: px
+        value: 300
+      stateVars:
+        stateVarMap: {}
+      timers:
+        timerMap: {}
+      top:
+        mode: gridUnit
+        value: 0
+      type: PAGE_WIDGET
+      version: 8
+      widgetId: "0"
+      widgetName: ProjectDetails
+      width:
+        mode: gridUnit
+        value: 0
+    id: eac3e24b-4924-4187-821c-7958aa74a8e3
+name: ProjectDetails

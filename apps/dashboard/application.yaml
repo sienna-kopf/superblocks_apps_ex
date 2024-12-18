@@ -1,0 +1,194 @@
+configuration:
+  routes:
+    34b0d858-9d0d-41f8-ae8f-b8655116ac75:
+      id: 34b0d858-9d0d-41f8-ae8f-b8655116ac75
+      pageId: e5d5a84d-2f70-4e65-8db2-fb15c9e038be
+      path: /job-details
+      testParams: {}
+    65fa7792-296d-4327-b1ff-f8c5567e29a9:
+      id: 65fa7792-296d-4327-b1ff-f8c5567e29a9
+      pageId: b3b64205-d2db-4c7f-ad47-6b74416e74b1
+      path: /job-list
+      testParams: {}
+    66a293ce-1c1c-40b0-9abb-9bec92c3dca1:
+      id: 66a293ce-1c1c-40b0-9abb-9bec92c3dca1
+      pageId: 02ff3e6b-84e7-478d-ae24-97231f07d297
+      path: /project-list
+      testParams: {}
+    ahjjxoy521:
+      id: ahjjxoy521
+      pageId: 41f8884c-9624-402f-8c12-670d34b59548
+      path: /
+    b841c50a-d3f9-42e0-841c-4c507e3f0838:
+      id: b841c50a-d3f9-42e0-841c-4c507e3f0838
+      pageId: e8010939-0577-47ad-9316-61b4c2c93538
+      path: /project-details
+      testParams: {}
+id: 467ebc2b-d60a-49b9-abf2-cbbd016edf22
+name: Dashboard
+organizationId: 5b97a3f0-e2fa-4922-97a9-3823d5d0f99c
+settings:
+  theme:
+    borderRadius:
+      mode: px
+      value: 4
+    mode: AUTO
+    padding:
+      bottom:
+        mode: px
+        value: 12
+      left:
+        mode: px
+        value: 12
+      right:
+        mode: px
+        value: 12
+      top:
+        mode: px
+        value: 12
+    palette:
+      dark:
+        appBackgroundColor: "#131516"
+        primaryColor: "#27BBFF"
+      light:
+        appBackgroundColor: "#F9FAFB"
+        primaryColor: "#27BBFF"
+    primaryColor: "#27BBFF"
+    typeFace: Roboto
+    typographies:
+      body1:
+        fontFamily: inherit
+        fontSize: 16px
+        fontWeight: 400
+        letterSpacing: 0em
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      body2:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      body3:
+        fontFamily: inherit
+        fontSize: 12px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      buttonLabel:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.1
+        textColor:
+          default: primary500
+      code:
+        fontFamily: Roboto Mono
+        fontSize: 13px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral700
+      heading1:
+        fontFamily: inherit
+        fontSize: 36px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading2:
+        fontFamily: inherit
+        fontSize: 28px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading3:
+        fontFamily: inherit
+        fontSize: 24px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading4:
+        fontFamily: inherit
+        fontSize: 20px
+        fontWeight: 500
+        letterSpacing: -0.01em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading5:
+        fontFamily: inherit
+        fontSize: 16px
+        fontWeight: 500
+        letterSpacing: 0em
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      heading6:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral900
+      inputLabel:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+          disabled: colors.neutral300
+          error: colors.danger
+      inputPlaceholder:
+        fontFamily: inherit
+        fontSize: inherit
+        fontStyle: inherit
+        fontWeight: 400
+        letterSpacing: inherit
+        lineHeight: inherit
+        textColor:
+          default: colors.neutral300
+        textDecoration: inherit
+        textTransform: inherit
+      inputText:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 400
+        letterSpacing: normal
+        lineHeight: 1.2
+        textColor:
+          default: colors.neutral700
+      label:
+        fontFamily: inherit
+        fontSize: 14px
+        fontWeight: 500
+        letterSpacing: normal
+        lineHeight: 1.5
+        textColor:
+          default: colors.neutral700
+      link:
+        fontFamily: inherit
+        fontSize: inherit
+        fontWeight: 400
+        letterSpacing: inherit
+        lineHeight: inherit
+        textColor:
+          default: colors.primary500
+        textDecoration: none
+        textTransform: inherit
+    version: 5

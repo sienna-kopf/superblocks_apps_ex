@@ -1,0 +1,18 @@
+blocks:
+  - name: Step1
+    step:
+      integration: 4fae05ae-9160-4a59-872f-03170a2ad402
+      mssql:
+        body: |-
+          SELECT * FROM sync_projects as p
+          WHERE p.ProjectRecID = {{Dropdown1.selectedOptionValue}}
+        operation: run_sql
+        usePreparedSql: true
+metadata:
+  id: cfa2374c-7399-446f-99fc-a3688dc34962
+  name: getProjectDetails
+  organization: 5b97a3f0-e2fa-4922-97a9-3823d5d0f99c
+trigger:
+  application:
+    id: 467ebc2b-d60a-49b9-abf2-cbbd016edf22
+    pageId: e8010939-0577-47ad-9316-61b4c2c93538

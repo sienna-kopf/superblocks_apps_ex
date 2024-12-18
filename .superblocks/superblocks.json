@@ -1,0 +1,12 @@
+{
+  "configType": "ROOT",
+  "metadata": {
+    "cliVersion": "1.9.0"
+  },
+  "resources": {
+    "467ebc2b-d60a-49b9-abf2-cbbd016edf22": {
+      "location": "apps/dashboard",
+      "resourceType": "APPLICATION"
+    }
+  }
+}

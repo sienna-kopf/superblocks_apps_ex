@@ -1,0 +1,46 @@
+{
+  "apis": {},
+  "configType": "APPLICATION",
+  "id": "467ebc2b-d60a-49b9-abf2-cbbd016edf22",
+  "pages": {
+    "02ff3e6b-84e7-478d-ae24-97231f07d297": {
+      "apis": {
+        "739311b3-9f81-455f-9ff1-fde6b7f8a293": "API1",
+        "78585a48-562f-4ec6-8fa2-1e02c248829e": "getProjectDepartments",
+        "d91e6c20-c8ad-4929-bc27-b1113ec75fd1": "getClientCompanyNames",
+        "fa0d38ee-6d83-4924-b594-90a4e4af836c": "getProjects"
+      },
+      "id": "02ff3e6b-84e7-478d-ae24-97231f07d297",
+      "name": "ProjectList"
+    },
+    "41f8884c-9624-402f-8c12-670d34b59548": {
+      "apis": {
+        "e6995801-616b-4351-a2e4-8d12754202cf": "getProjects",
+        "f6b4816a-954b-46b4-a840-46ed232e298f": "getProjectsJobs_byMonth_last6month"
+      },
+      "id": "41f8884c-9624-402f-8c12-670d34b59548",
+      "name": "home"
+    },
+    "b3b64205-d2db-4c7f-ad47-6b74416e74b1": {
+      "apis": {
+        "11eb78c2-ab75-49f8-b422-4d41c74b3e9e": "getJobs"
+      },
+      "id": "b3b64205-d2db-4c7f-ad47-6b74416e74b1",
+      "name": "JobList"
+    },
+    "e5d5a84d-2f70-4e65-8db2-fb15c9e038be": {
+      "apis": {},
+      "id": "e5d5a84d-2f70-4e65-8db2-fb15c9e038be",
+      "name": "JobDetails"
+    },
+    "e8010939-0577-47ad-9316-61b4c2c93538": {
+      "apis": {
+        "28045581-3c5c-4ff0-82a6-d220b2cedf43": "getProjects",
+        "48ea6ebf-0698-4142-b2b7-ffdee01ff438": "getJobs",
+        "cfa2374c-7399-446f-99fc-a3688dc34962": "getProjectDetails"
+      },
+      "id": "e8010939-0577-47ad-9316-61b4c2c93538",
+      "name": "ProjectDetails"
+    }
+  }
+}

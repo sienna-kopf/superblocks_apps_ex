@@ -1,0 +1,97 @@
+{
+  "name": "react-big-schedule",
+  "version": "4.4.5",
+  "description": "React Big Schedule  is a powerful and intuitive scheduler and resource planning solution built with React. Seamlessly integrate this modern browser-compatible component into your applications to effectively manage time, appointments, and resources. With drag-and-drop functionality, interactive UI, and granular views, react-big-schedule empowers users to effortlessly schedule and allocate resources with precision. Enhance productivity and streamline your workflow with this React-based solution, designed to optimize time management and simplify calendar-based operations. Perfect for applications requiring advanced scheduling capabilities, react-big-schedule offers a seamless and intuitive experience for managing appointments, resource allocation, and time slots. Unlock the potential of your React projects with react-big-schedule and revolutionize the way you handle scheduling and resource planning. It is the updated version of react-big-scheduler",
+  "keywords": [
+    "react-big-schedule",
+    "react-scheduler",
+    "react-schedule",
+    "react big schedule",
+    "react scheduler",
+    "react-big-scheduler",
+    "react scheduler master",
+    "react",
+    "react-big-schedulers",
+    "react-component",
+    "antd",
+    "resource planning",
+    "scheduler",
+    "Resource planning",
+    "Time management",
+    "Calender",
+    "Scheduling component",
+    "React framework",
+    "Drag-and-drop",
+    "Resource allocation",
+    "Time slots",
+    "Appointment management",
+    "Interactive UI",
+    "Modern browser compatibility",
+    "React-based solution",
+    "Granular views",
+    "Productivity enhancement",
+    "antd"
+  ],
+  "license": "MIT",
+  "author": "Ansul Agrawal (https://github.com/ansulagrawal)",
+  "files": [
+    "dist",
+    "README.md",
+    "License"
+  ],
+  "main": "dist/index.js",
+  "homepage": "https://react-big-schedule.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/react-scheduler/react-big-schedule"
+  },
+  "bugs": {
+    "url": "https://github.com/react-scheduler/react-big-schedule/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "dev": "webpack serve --open",
+    "build": "webpack --mode production",
+    "build:lib": "node scripts/build.js",
+    "clean": "npx rimraf dist",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src/**/*.{js,jsx} --fix"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.1",
+    "antd": "^5.22.1",
+    "dayjs": "^1.11.13",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dnd": "^14.0.5",
+    "react-dnd-html5-backend": "^14.1.0",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.1",
+    "rrule": "^2.8.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.7",
+    "@babel/core": "^7.25.7",
+    "@babel/eslint-parser": "^7.25.7",
+    "@babel/preset-env": "^7.25.7",
+    "@babel/preset-react": "^7.25.7",
+    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-webpack-plugin": "^4.2.0",
+    "fs-extra": "^11.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}
